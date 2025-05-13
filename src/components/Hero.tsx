@@ -18,60 +18,64 @@ const Hero = () => {
     >
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden z-0">
-        <div className="absolute top-20 right-10 w-64 h-64 bg-mrblue-100 rounded-full blur-3xl opacity-30"></div>
-        <div className="absolute bottom-20 left-10 w-80 h-80 bg-mrteal-100 rounded-full blur-3xl opacity-30"></div>
-        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-mrblue-50 rounded-full blur-xl opacity-20"></div>
+        <div className="absolute top-20 right-10 w-64 h-64 bg-mrblue-700 rounded-full blur-3xl opacity-20"></div>
+        <div className="absolute bottom-20 left-10 w-80 h-80 bg-mrteal-700 rounded-full blur-3xl opacity-20"></div>
+        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-mrblue-600 rounded-full blur-xl opacity-10"></div>
       </div>
 
       <div className="container mx-auto px-4 z-10">
         <div className="max-w-3xl mx-auto text-center animate-fade-in">
-          <h1 className="mb-6">
-            <span className="block font-semibold text-foreground">
-              Transform Your Business with
+          <div className="mb-8 flex justify-center">
+            <img src="/lovable-uploads/cf3c985c-d4e7-494c-bd29-3572cb1560f8.png" alt="MR Labs Logo" className="w-32 h-32" />
+          </div>
+          
+          <h1 className="mb-8">
+            <span className="block text-foreground">
+              Supercharge Your Business with
             </span>
-            <span className="gradient-text font-bold">
-              AI & Workflow Automation
+            <span className="gradient-text">
+              AI & Automation
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-            MR Labs helps businesses in Melbourne and beyond improve efficiency, 
-            cut costs, and increase profits through intelligent automation solutions.
+          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Making businesses in Melbourne work smarter, 
+            not harder. Cut costs, save time, boost profits.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button
               onClick={() => scrollToSection("services")}
-              className="bg-gradient-to-r from-mrblue-500 to-mrteal-500 hover:from-mrblue-600 hover:to-mrteal-600 text-white px-8 py-6 text-lg"
+              className="bg-gradient-to-r from-mrblue-500 to-mrteal-500 hover:from-mrblue-600 hover:to-mrteal-600 text-white px-8 py-6 text-xl"
             >
-              Explore Our Solutions
+              See What We Do
             </Button>
             <Button
               onClick={() => scrollToSection("contact")}
               variant="outline"
-              className="border-mrblue-300 text-foreground hover:bg-mrblue-50 px-8 py-6 text-lg group"
+              className="border-mrblue-500 text-foreground hover:bg-mrblue-900/50 px-8 py-6 text-xl group"
             >
               Get in Touch
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
 
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto">
+          <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-10 max-w-2xl mx-auto">
             <div className="flex flex-col items-center">
-              <span className="text-3xl font-bold gradient-text">100+</span>
-              <span className="text-sm text-muted-foreground">Happy Clients</span>
+              <span className="text-4xl font-bold gradient-text">100+</span>
+              <span className="text-base text-muted-foreground mt-2">Happy Clients</span>
             </div>
             <div className="flex flex-col items-center">
-              <span className="text-3xl font-bold gradient-text">95%</span>
-              <span className="text-sm text-muted-foreground">Client Retention</span>
+              <span className="text-4xl font-bold gradient-text">95%</span>
+              <span className="text-base text-muted-foreground mt-2">Stay With Us</span>
             </div>
             <div className="flex flex-col items-center">
-              <span className="text-3xl font-bold gradient-text">30%</span>
-              <span className="text-sm text-muted-foreground">Avg. Cost Reduction</span>
+              <span className="text-4xl font-bold gradient-text">30%</span>
+              <span className="text-base text-muted-foreground mt-2">Cost Saved</span>
             </div>
             <div className="flex flex-col items-center">
-              <span className="text-3xl font-bold gradient-text">10+</span>
-              <span className="text-sm text-muted-foreground">Years Experience</span>
+              <span className="text-4xl font-bold gradient-text">10+</span>
+              <span className="text-base text-muted-foreground mt-2">Years Doing This</span>
             </div>
           </div>
         </div>

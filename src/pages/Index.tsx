@@ -2,7 +2,6 @@
 import React, { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import AboutUs from "@/components/AboutUs";
 import Services from "@/components/Services";
 import Portfolio from "@/components/Portfolio";
 import ContactForm from "@/components/ContactForm";
@@ -25,7 +24,7 @@ const Index = () => {
     });
 
     // Update title
-    document.title = "MR Labs - AI & Workflow Automation Agency";
+    document.title = "MR Labs - AI & Workflow Automation";
 
     return () => {
       revealElements.forEach((element) => {
@@ -38,7 +37,6 @@ const Index = () => {
     <div className="relative overflow-x-hidden">
       <Navbar />
       <Hero />
-      <AboutUs />
       <Services />
       <Portfolio />
       <ContactForm />

@@ -17,7 +17,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({
   image,
 }) => {
   return (
-    <div className="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow card-hover">
+    <div className="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow card-hover bg-card border border-border">
       <div className="h-48 overflow-hidden">
         <img
           src={image}
@@ -25,15 +25,15 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({
           className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
         />
       </div>
-      <div className="p-6 bg-white">
+      <div className="p-6">
         <div className="flex justify-between items-center mb-3">
-          <span className="px-3 py-1 bg-mrblue-50 text-mrblue-600 rounded-full text-xs font-medium">
+          <span className="px-3 py-1 bg-mrblue-900/50 text-mrblue-300 rounded-full text-sm font-medium">
             {category}
           </span>
-          <span className="text-mrteal-600 font-semibold text-sm">{impact}</span>
+          <span className="text-mrteal-400 font-semibold text-sm">{impact}</span>
         </div>
-        <h3 className="text-xl font-semibold mb-2">{title}</h3>
-        <p className="text-muted-foreground text-sm">{description}</p>
+        <h3 className="text-2xl font-semibold mb-3">{title}</h3>
+        <p className="text-muted-foreground">{description}</p>
       </div>
     </div>
   );

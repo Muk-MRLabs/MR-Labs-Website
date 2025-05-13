@@ -33,12 +33,13 @@ const Navbar = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-transparent"
+        isScrolled ? "bg-background/90 backdrop-blur-md shadow-md" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center">
-          <a href="#home" className="text-2xl font-bold">
+          <a href="#home" className="text-2xl font-bold flex items-center">
+            <img src="/lovable-uploads/cf3c985c-d4e7-494c-bd29-3572cb1560f8.png" alt="MR Labs Logo" className="h-10 w-10 mr-2" />
             <span className="gradient-text">MR Labs</span>
           </a>
         </div>
@@ -47,33 +48,27 @@ const Navbar = () => {
         <nav className="hidden md:flex items-center space-x-8">
           <button
             onClick={() => scrollToSection("home")}
-            className="text-foreground hover:text-mrblue-500 transition-colors"
+            className="text-foreground hover:text-mrblue-400 transition-colors text-lg"
           >
             Home
           </button>
           <button
-            onClick={() => scrollToSection("about")}
-            className="text-foreground hover:text-mrblue-500 transition-colors"
-          >
-            About
-          </button>
-          <button
             onClick={() => scrollToSection("services")}
-            className="text-foreground hover:text-mrblue-500 transition-colors"
+            className="text-foreground hover:text-mrblue-400 transition-colors text-lg"
           >
             Services
           </button>
           <button
             onClick={() => scrollToSection("portfolio")}
-            className="text-foreground hover:text-mrblue-500 transition-colors"
+            className="text-foreground hover:text-mrblue-400 transition-colors text-lg"
           >
-            Portfolio
+            Our Work
           </button>
           <Button
             onClick={() => scrollToSection("contact")}
-            className="bg-gradient-to-r from-mrblue-500 to-mrteal-500 hover:from-mrblue-600 hover:to-mrteal-600 text-white"
+            className="bg-gradient-to-r from-mrblue-500 to-mrteal-500 hover:from-mrblue-600 hover:to-mrteal-600 text-white text-lg"
           >
-            Contact Us
+            Talk to Us
           </Button>
         </nav>
 
@@ -92,37 +87,31 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-background border-t">
+        <div className="md:hidden bg-card/95 backdrop-blur-sm border-b border-border">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <button
               onClick={() => scrollToSection("home")}
-              className="py-2 text-foreground hover:text-mrblue-500 transition-colors text-left"
+              className="py-2 text-foreground hover:text-mrblue-400 transition-colors text-left text-lg"
             >
               Home
             </button>
             <button
-              onClick={() => scrollToSection("about")}
-              className="py-2 text-foreground hover:text-mrblue-500 transition-colors text-left"
-            >
-              About
-            </button>
-            <button
               onClick={() => scrollToSection("services")}
-              className="py-2 text-foreground hover:text-mrblue-500 transition-colors text-left"
+              className="py-2 text-foreground hover:text-mrblue-400 transition-colors text-left text-lg"
             >
               Services
             </button>
             <button
               onClick={() => scrollToSection("portfolio")}
-              className="py-2 text-foreground hover:text-mrblue-500 transition-colors text-left"
+              className="py-2 text-foreground hover:text-mrblue-400 transition-colors text-left text-lg"
             >
-              Portfolio
+              Our Work
             </button>
             <Button
               onClick={() => scrollToSection("contact")}
-              className="bg-gradient-to-r from-mrblue-500 to-mrteal-500 hover:from-mrblue-600 hover:to-mrteal-600 text-white w-full"
+              className="bg-gradient-to-r from-mrblue-500 to-mrteal-500 hover:from-mrblue-600 hover:to-mrteal-600 text-white w-full text-lg"
             >
-              Contact Us
+              Talk to Us
             </Button>
           </div>
         </div>
