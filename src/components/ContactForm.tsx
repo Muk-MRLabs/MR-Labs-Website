@@ -1,36 +1,32 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { toast } from "sonner";
-
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     company: "",
-    message: "",
+    message: ""
   });
-  
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const {
+      name,
+      value
+    } = e.target;
+    setFormData(prev => ({
       ...prev,
-      [name]: value,
+      [name]: value
     }));
   };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Here you would typically send the form data to your backend
     // For now, we'll simulate a successful submission
     setTimeout(() => {
@@ -40,14 +36,12 @@ const ContactForm = () => {
         email: "",
         phone: "",
         company: "",
-        message: "",
+        message: ""
       });
       setIsSubmitting(false);
     }, 1000);
   };
-
-  return (
-    <section id="contact" className="bg-muted">
+  return <section id="contact" className="bg-muted">
       <div className="container mx-auto px-4">
         <h2 className="section-heading">Get in <span className="gradient-text">Touch</span></h2>
         
@@ -111,28 +105,13 @@ const ContactForm = () => {
                     <label htmlFor="name" className="text-sm font-medium">
                       Full Name <span className="text-red-500">*</span>
                     </label>
-                    <Input
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      placeholder="John Smith"
-                    />
+                    <Input id="name" name="name" value={formData.name} onChange={handleChange} required placeholder="John Smith" />
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-sm font-medium">
                       Email <span className="text-red-500">*</span>
                     </label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      placeholder="john@company.com"
-                    />
+                    <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required placeholder="john@company.com" />
                   </div>
                 </div>
                 
@@ -141,25 +120,13 @@ const ContactForm = () => {
                     <label htmlFor="phone" className="text-sm font-medium">
                       Phone Number
                     </label>
-                    <Input
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      placeholder="+61 123 456 789"
-                    />
+                    <Input id="phone" name="phone" value={formData.phone} onChange={handleChange} placeholder="+61 123 456 789" />
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="company" className="text-sm font-medium">
                       Company
                     </label>
-                    <Input
-                      id="company"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleChange}
-                      placeholder="Your Company Ltd."
-                    />
+                    <Input id="company" name="company" value={formData.company} onChange={handleChange} placeholder="Your Company Ltd." />
                   </div>
                 </div>
                 
@@ -167,22 +134,10 @@ const ContactForm = () => {
                   <label htmlFor="message" className="text-sm font-medium">
                     Message <span className="text-red-500">*</span>
                   </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    placeholder="Tell us about your project or inquiry..."
-                    rows={5}
-                  />
+                  <Textarea id="message" name="message" value={formData.message} onChange={handleChange} required placeholder="Tell us about your project or inquiry..." rows={5} />
                 </div>
                 
-                <Button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-mrblue-500 to-mrteal-500 hover:from-mrblue-600 hover:to-mrteal-600 text-white"
-                  disabled={isSubmitting}
-                >
+                <Button type="submit" className="w-full bg-gradient-to-r from-mrblue-500 to-mrteal-500 hover:from-mrblue-600 hover:to-mrteal-600 text-white" disabled={isSubmitting}>
                   {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
                 
@@ -194,8 +149,6 @@ const ContactForm = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactForm;
