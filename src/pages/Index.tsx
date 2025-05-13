@@ -36,11 +36,14 @@ const Index = () => {
   return (
     <div className="relative overflow-x-hidden">
       <Navbar />
-      <Hero />
-      <Services />
-      <Portfolio />
-      <ContactForm />
-      <Footer />
+      {/* Add padding top to accommodate the fixed navbar */}
+      <div className="pt-16">
+        <Hero />
+        <Services />
+        <Portfolio />
+        <ContactForm />
+        <Footer />
+      </div>
     </div>
   );
 };

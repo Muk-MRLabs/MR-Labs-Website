@@ -17,7 +17,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">
+            <h3 className="text-xl font-bold mb-4 flex items-center">
+              <img 
+                src="/lovable-uploads/cf3c985c-d4e7-494c-bd29-3572cb1560f8.png" 
+                alt="MR Labs Logo" 
+                className="h-10 w-10 mr-2 invert" 
+              />
               <span className="gradient-text">MR Labs</span>
             </h3>
             <p className="text-muted-foreground mb-4">
@@ -61,14 +66,6 @@ const Footer = () => {
                   className="text-muted-foreground hover:text-mrblue-500 transition-colors"
                 >
                   Home
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("about")}
-                  className="text-muted-foreground hover:text-mrblue-500 transition-colors"
-                >
-                  About Us
                 </button>
               </li>
               <li>
