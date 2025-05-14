@@ -1,12 +1,14 @@
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { 
   Carousel, 
   CarouselContent, 
-  CarouselItem, 
-  CarouselNext, 
-  CarouselPrevious 
+  CarouselItem,
+  CarouselPrevious, 
+  CarouselNext 
 } from "@/components/ui/carousel";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 
 const applicationLogos = [
   { name: "Slack", logo: "https://cdn.worldvectorlogo.com/logos/slack-new-2019.svg" },
@@ -49,6 +51,18 @@ const applicationLogos = [
 ];
 
 const AppLogosCarousel = () => {
+  const [api, setApi] = useState<any>(null);
+
+  const autoplayPlugin = React.useMemo(
+    () =>
+      Autoplay({
+        delay: 3000, // Slow and readable speed (3 seconds per slide)
+        stopOnInteraction: false, // Continue autoplay after user interaction
+        stopOnMouseEnter: false, // Don't stop on mouse enter
+      }),
+    []
+  );
+
   return (
     <div className="w-full py-12 bg-muted/50">
       <div className="container mx-auto px-4">
@@ -59,8 +73,10 @@ const AppLogosCarousel = () => {
         <Carousel
           opts={{
             align: "start",
-            loop: true,
+            loop: true, // Enable looping
           }}
+          plugins={[autoplayPlugin]} // Add the autoplay plugin
+          setApi={setApi}
           className="w-full"
         >
           <CarouselContent className="-ml-2 md:-ml-4">
