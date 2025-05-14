@@ -1,6 +1,8 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
@@ -10,14 +12,8 @@ const Hero = () => {
       });
     }
   };
+  
   return <section id="home" className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-background to-muted pt-20">
-      {/* Background elements */}
-      <div className="absolute inset-0 overflow-hidden z-0">
-        <div className="absolute top-20 right-10 w-64 h-64 bg-mrblue-700 rounded-full blur-3xl opacity-20"></div>
-        <div className="absolute bottom-20 left-10 w-80 h-80 bg-mrteal-700 rounded-full blur-3xl opacity-20"></div>
-        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-mrblue-600 rounded-full blur-xl opacity-10"></div>
-      </div>
-
       <div className="container mx-auto px-4 z-10">
         <div className="max-w-3xl mx-auto text-center animate-fade-in">
           <div className="mb-8 flex justify-center">
@@ -67,4 +63,5 @@ const Hero = () => {
       </div>
     </section>;
 };
+
 export default Hero;
