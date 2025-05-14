@@ -74,6 +74,8 @@ const AppLogosCarousel = () => {
           opts={{
             align: "start",
             loop: true, // Enable looping
+            dragFree: true, // Enables smoother scrolling
+            speed: 15, // Slower animation speed for smoother scrolling
           }}
           plugins={[autoplayPlugin]} // Add the autoplay plugin
           setApi={setApi}
@@ -82,12 +84,17 @@ const AppLogosCarousel = () => {
           <CarouselContent className="-ml-2 md:-ml-4">
             {applicationLogos.map((app, index) => (
               <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/3 md:basis-1/4 lg:basis-1/6">
-                <div className="h-24 p-2 flex flex-col items-center justify-center">
-                  <div className="h-12 w-12 bg-muted rounded-md flex items-center justify-center mb-2 overflow-hidden">
+                <div className="h-28 p-2 flex flex-col items-center justify-center">
+                  <div className="h-16 w-16 bg-white rounded-md flex items-center justify-center mb-2 overflow-hidden p-2">
                     <img 
                       src={app.logo} 
                       alt={`${app.name} logo`} 
-                      className="h-8 w-8 object-contain" 
+                      className="h-12 w-12 object-contain" 
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        console.log(`Failed to load image for ${app.name}`);
+                        target.src = "https://via.placeholder.com/100?text=" + app.name;
+                      }}
                     />
                   </div>
                   <span className="text-xs text-center text-muted-foreground">{app.name}</span>
