@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Workflow, Activity, Database, Cog, PieChart, Monitor } from "lucide-react";
 interface ServiceCardProps {
@@ -32,7 +33,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       <div className="h-14 w-14 rounded-full bg-gradient-to-r from-mrblue-100 to-mrteal-100 flex items-center justify-center mb-4 text-mrblue-600">
         {getIcon()}
       </div>
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
+      <h3 className="text-2xl font-bold mb-3 gradient-text">{title}</h3>
       <p className="text-muted-foreground">{description}</p>
     </div>;
 };

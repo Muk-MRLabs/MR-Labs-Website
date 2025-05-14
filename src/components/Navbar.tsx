@@ -40,9 +40,9 @@ const Navbar = () => {
         <div className="flex items-center">
           <a href="#home" className="text-2xl font-bold flex items-center">
             <img 
-              src="/lovable-uploads/cf3c985c-d4e7-494c-bd29-3572cb1560f8.png" 
+              src="/lovable-uploads/b1e34a76-0579-453d-bed3-39841e7c8d00.png" 
               alt="MR Labs Logo" 
-              className={`h-10 w-10 mr-2 ${isScrolled ? "invert" : ""}`} 
+              className={`h-10 w-auto mr-2`} 
             />
             <span className={`gradient-text ${isScrolled ? "text-xl" : "text-2xl"} transition-all duration-300`}>MR Labs</span>
           </a>

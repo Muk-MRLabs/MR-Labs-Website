@@ -6,6 +6,7 @@ import Services from "@/components/Services";
 import Portfolio from "@/components/Portfolio";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
+import AppLogosCarousel from "@/components/AppLogosCarousel";
 
 const Index = () => {
   // Intersection Observer for reveal animations
@@ -40,6 +41,7 @@ const Index = () => {
       <div className="pt-16">
         <Hero />
         <Services />
+        <AppLogosCarousel />
         <Portfolio />
         <ContactForm />
         <Footer />
