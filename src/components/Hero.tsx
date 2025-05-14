@@ -47,7 +47,7 @@ const Hero = () => {
 
           <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-10 max-w-2xl mx-auto">
             <div className="flex flex-col items-center">
-              <span className="text-4xl font-bold gradient-text">2+</span>
+              <span className="text-4xl font-bold gradient-text">3+</span>
               <span className="text-base text-muted-foreground mt-2">Happy Clients</span>
             </div>
             <div className="flex flex-col items-center">

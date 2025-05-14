@@ -76,23 +76,17 @@ const ContactForm = () => {
               </div>
               
               <div className="flex items-start">
-                <div className="h-10 w-10 rounded-full bg-gradient-to-r from-mrblue-100 to-mrteal-100 flex items-center justify-center mr-4">
-                  <MapPin className="h-5 w-5 text-mrblue-600" />
-                </div>
+                
                 <div>
-                  <h4 className="text-lg font-medium">Office</h4>
-                  <p className="text-muted-foreground">
-                    Level 5, 123 Collins Street<br />
-                    Melbourne VIC 3000<br />
-                    Australia
-                  </p>
+                  
+                  
                 </div>
               </div>
             </div>
             
             <div className="mt-10">
               <h4 className="text-lg font-medium mb-2">Business Hours</h4>
-              <p className="text-muted-foreground">Monday - Friday: 9:00 AM - 5:30 PM AEST</p>
+              <p className="text-muted-foreground">Monday - Friday: 9:00 AM - 5:00 PM AEST</p>
             </div>
           </div>
           
